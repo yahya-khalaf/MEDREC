@@ -1,5 +1,4 @@
 from django.contrib import admin
-from pages.views import register
 
 from patient.models import patient_info
 from patient.models import patientRecord

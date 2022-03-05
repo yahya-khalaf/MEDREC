@@ -1,0 +1,122 @@
+{%block patient%}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Patient Information</title> 
+        <link rel="stylesheet" href="{% static 'css/patient.css' %}"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    </head>
+    <body>
+        <div class="header">
+            <img src="{% static 'Images/logo.png' %}" alt="logo" />
+            <div class="topnav" id="myTopnav">
+              <a href="#Banner" >Home</a>
+              <a href="#About-Us">About Us</a>
+              <a href="#footer">Contact Us</a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+        </div>
+          <div class="regform">
+            <h1>Patient Information</h1>
+          </div>
+         <div class="main">
+            <form >
+                <div id="name">
+                    <h2 class="name">Name</h2>
+                    <input class ="firstname" type= "text" placeholder="Enter your first name"  name="first_name" >
+
+                    <input class ="lastname" type="text" placeholder="Enter your last name"  name="last_name" >
+                </div>
+                     <h2 class="name">SSN</h2>
+                     <input class="SSN" type="text" placeholder="5555-55-555" name="SSN" minlength="4" maxlength="9" size="9" >
+
+                     <h2 class="name">Password</h2>
+                    <input class="password" type="password" placeholder="Enter your password" name="password" minlength="6" maxlength="9" size="9"  >
+
+                    <h2 class="name">Email</h2>
+                    <input class="email" type="email" placeholder="Enter your Email" name="email" >
+                    
+                    <h2 class="name">Phone Number</h2>
+                    <input class="phone-number" type="number" placeholder="Enter your phone number" name="phone" >
+
+                    <h2 class="name">City</h2>
+                    <input class="city" type="text" placeholder="Enter your city" name="city" >
+
+                    <h2 class="name">Address</h2>
+                    <input class="address" type="text" placeholder="Enter your address" name="address" >
+
+                    <h2 class="name">Height</h2>
+                    <input class="number" type="number" placeholder="Enter your height" name="nmber"  >
+
+                    <h2 class="name">Weight</h2>
+                    <input class="number" type="number" placeholder="Enter your weight" name="number"  >
+
+                    <h2 class="name">Age</h2>
+                    <input class="Age" type="number" placeholder="Enter your age" name="Age" >
+
+                    <h2 class="name">Diabetes type</h2>
+                    <input class="Diabetestype" type="text" placeholder="Type I , Type II,..etc" name="Diabetestype"  >
+
+                    <h2 class="name"> Gender</h2>
+                    <select class="gender" name="gender" >
+	                 <option value="male">Male</option>
+	                 <option value="female">Female</option>
+                    </select>
+
+                    <br><br>
+                    
+                    <!-- <input class="button" type="Submit"/> -->
+                    <button class="button" type="submit" formaction="{% url 'pprofile' %}"><b>Save</b></button>
+            </form>
+        </div>
+        <div id="sideNav">                
+            <nav>
+              <ul>
+                <li><a href="#Banner" >Home</a></li>
+                <li><a href="#About-Us" >About Us</a></li>
+                <li><a href="#Contact-Us" >Contact Us</a></li>
+              </ul>
+            </nav>
+        </div>
+      
+          <!--the button layout -->
+          <div id="menuButton">            
+            <img src="{% static 'Images/menu.png' %}" id="menu">
+          </div>
+        <footer id ="footer">
+            <p>Contact Us</p>
+            <p><b>How to reach our services?</b></p>
+            <div class="social">
+              <a href="https://www.facebook.com/profile.php?id=100005210747809"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.linkedin.com/in/miran-mahmoud-616a42217/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </footer>
+          <script>           
+            var menuButton= document.getElementById("menuButton")
+            var sideNav= document.getElementById("sideNav")
+            var menu = document.getElementById("menu")
+      
+            sideNav.style.right=="-250px";
+      
+            menuButton.onclick = function(){ 
+                 if(sideNav.style.right=="-250px"){sideNav.style.right="0";
+                 menu.src="{% static 'Images/menu_inverse.png' %}"
+                }
+                 else{ sideNav.style.right="-250px";
+                 menu.src="{% static 'Images/menu.png' %}"
+                     } 
+            }  
+             var scroll = new SmoothScroll('a[href*="#"]', {
+                 speed: 1000,
+                 speedAsDuration: true
+        });
+          </script>
+     </body>
+</html>
+
+
+
+{%endblock patient%}

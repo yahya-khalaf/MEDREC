@@ -3,11 +3,11 @@ from . import views
 
 
 urlpatterns = [
-    path ('register',views.register,name='register')
-    # path('', views.profile, name ='profile' ),
-    # path('history', views.history, name ='history' ),
-    # path('prediction', views.prediction, name ='prediction' ),
-    # path('data', views.data, name ='data' ),
+    path ('patient',views.patient,name='patient'),
+    path('pedit_record', views.pedit_record, name ='pedit_record' ),
+    path('pprediction', views.pprediction, name ='pprediction' ),
+    path('pprofile', views.pprofile, name ='pprofile' ),
+    path('precord', views.precord, name ='precord' ),
 
 
     ] 
