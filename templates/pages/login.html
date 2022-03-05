@@ -1,0 +1,55 @@
+{%block log%}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login page</title> 
+        <link rel="stylesheet" href="{%static 'css/login.css'%}">  
+    </head>
+    <body>
+        <div class="regform">
+            <h1>Login</h1>
+            
+        </div>
+
+        <div class="main">
+            <form method="post" action="profile.html">
+                {% csrf_token %}
+                <div id="username">
+                    <h2 class="name">SSN</h2>
+                    <input class ="username" type= "text" placeholder="Enter your SSN"  name="name" required >
+                </div>
+                     <h2 class="name">Password</h2>
+                     <input class="password" type="password" placeholder="Enter your password" name="password" minlength="6" maxlength="9" size="9" required>
+
+                    <br><br>
+
+                    <input class="button" type="submit"/>
+        
+                    
+                     
+
+                    <a href="{% url 'register1'%}"><p><b> Doesn't have an account ?<b></p></a>
+
+
+            </form>
+        </div>
+     </body>
+</html>
+{%endblock log%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

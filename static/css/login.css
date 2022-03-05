@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+    background-image: url(Images/Img.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 60px;
+}
+
+.regform
+{
+    width: 800px;
+    background-color: black;
+    margin: auto;
+    color: #ffffff;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+}
+ .main
+ {
+     background-color: rgba(0, 0, 0, 0.288);
+     width: 800px;
+     margin: auto;
+ }
+ form
+ {
+     padding: 10px;
+ }
+
+ #name
+ {
+     width: 90%;
+     height: 60px;
+ }
+.name
+{
+    margin-left: 25px;
+    margin-top: 30px;
+    width: 200px;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+}
+.username
+{
+    position: relative;
+    left: 170px;
+    top: -33px;
+    line-height: 40px;
+    width: 300px;
+    border-radius: 6px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+.password
+{
+    position: relative;
+    left: 170px;
+    top: -30px;
+    line-height: 40px;
+    width: 300px;
+    border-radius: 6px;
+    padding: 1 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+
+.button
+{
+    position: relative;
+    left: 220px;
+    top: -150;
+    background-color: #366473;
+    display: block;
+    margin: 20px 0px 0px 20px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid #366473;
+    padding: 14px 110px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.25px;
+    font-size: 20px;
+}
+
+.button:hover
+{
+    background-color: rgb(59, 145, 172);
+}
+
+p
+{
+    position: relative;
+    left: 200px;
+    top: -150;
+    background-color: #0d3135;
+    width: 300px;
+    margin: 20px 0px 0px 20px;
+    text-align: center;
+    border-radius: 150px;
+    border: 2px solid #366473;
+    padding: 10px 10px;
+    outline: none;
+    color: white;
+    font-size: 20px;
+
+}
+
+
+
