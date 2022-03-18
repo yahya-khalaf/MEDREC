@@ -1,0 +1,17 @@
+doctor:
+ahmed   1234567
+
+ali 	98706305
+
+sami  987654
+
+
+shadi  98989898
+
+
+
+
+patient
+mohamed  12345678
+salma 0988776
+sara 876534983

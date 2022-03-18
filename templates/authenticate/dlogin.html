@@ -29,10 +29,10 @@
             <form action="{% url 'dprofile'%}">
               {% csrf_token %}
                     <h2 class="name">SSN</h2>
-                    <input class ="username" type= "text" placeholder="Enter your SSN"  name="name" required >
+                    <input class ="username" type= "text" placeholder="Enter your username"  name="name" required >
                
                      <h2 class="name">Password</h2>
-                     <input class="password" type="password" placeholder="Enter your password" name="password" minlength="6" maxlength="9" size="9" required>
+                     <input class="password" type="password" placeholder="Enter your password" name="password" minlength="6" maxlength="15" size="15" required>
 
                     <br><br>
 

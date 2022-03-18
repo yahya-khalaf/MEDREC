@@ -26,7 +26,7 @@
                             <div class = "card">
                                <img src= "{% static 'Images/profile.png' %}" >
                                <div class="mt-3">
-                                   <h3>Miran Mahmoud</h3>
+                                   <h3>{{name}}</h3>
                                    <a href="{%url 'home'%}">Home</a>
                                    <!-- <a href="mrecord.html">My Records</a>
                                    <a href="">Prediction</a> -->
@@ -50,7 +50,7 @@
                                         <h5><b>Full name<b></h5>
                                     </div>
                                     <div class="col-md-9 text-secondary">
-                                        Miran Mahmoud Mabrouk Abd Elmaksoud
+                                        {{fname}}{{lname}}
                                     </div>
                                 </div>
                                 <hr>
@@ -59,7 +59,7 @@
                                         <h5><b>SSN<b></h5>
                                     </div>
                                     <div class="col-md-9 text-secondary">
-                                        5555-555-55
+                                        {{ssn}}
                                     </div>
                                 </div>
                                 <hr>
@@ -69,7 +69,7 @@
                                         <h5><b>Email<b></h5>
                                     </div>
                                     <div class="col-md-9 text-secondary">
-                                        abc@gmail.com
+                                        {{email}}
                                     </div>
                                 </div>
                                 <hr>
@@ -78,7 +78,7 @@
                                         <h5><b>Phone<b></h5>
                                     </div>
                                     <div class="col-md-9 text-secondary">
-                                        0123456789
+                                        {{phone}}
                                     </div>
                                 </div>
                                 <hr>
@@ -87,7 +87,7 @@
                                         <h5><b>City<b></h5>
                                     </div>
                                     <div class="col-md-9 text-secondary">
-                                        Cairo,Alexandria,..etc
+                                        {{city}}
                                     </div>
                                 </div>
                                 <hr>
@@ -96,16 +96,15 @@
                                         <h5><b>Address<b></h5>
                                     </div>
                                     <div class="col-md-9 text-secondary">
-                                        street no.4
+                                        {{address}}
                                     </div>
                                 </div>
                                 <hr>
-                                <form>
-                                <div class="input-group rounded">
-                                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-                                    <form>
-                                      <button class="input-group-text border-0" formaction="{% url 'dpprofile' %}" id="search-addon">
-                                      <i class="fas fa-search"></i>
+                                <form class ="d-flex" method=POST  action = "{% url 'dpprofile' %}">
+                                    {% csrf_token %}
+                                    <input type="search" class="form-control rounded" name="dsearch" placeholder="Search patient" aria-label="Search" aria-describedby="search-addon" />
+                                    <button class="btn btn-outline-success" type="submit">
+                                    
                                     </button>
                                 </form>
                                 </div>

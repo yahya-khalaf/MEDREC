@@ -24,16 +24,21 @@
         </div>
 
         <div class="main">
-            <form action="{% url 'pprofile' %}">
-                
-                    <h2 class="name">SSN</h2>
-                    <input class ="username" type= "text" placeholder="Enter your SSN"  name="name" required >
+            <form action="" method="POST" >
+                    <h2 class="name">username</h2>
+                    <input class ="username" type= "text" placeholder="Enter your SSN"  name="pusername" required >
                
                      <h2 class="name">Password</h2>
-                     <input class="password" type="password" placeholder="Enter your password" name="password" minlength="6" maxlength="9" size="9" required>
+                     <input class="password" type="password" placeholder="Enter your password" name="ppassword" minlength="6" maxlength="9" size="9" required>
 
                     <br><br>
-
+                    {% csrf_token %}
+                    {%if messages %}
+                      {%for message in messages%}
+                        {{message}}
+                      {% endfor %}
+                    {% endif %}
+      
                     <input class="button" type="submit"/>
         
                     
